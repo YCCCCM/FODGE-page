@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FODGE — Fast, Open, Demo-able Gesture/Editing (?)</title>
+    <meta name="description" content="FODGE: Project page (MotionLCM-style)." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+      :root{
+        --bg:#0a0a0f; --fg:#e8e8f0; --muted:#a5a8b3; --card:#12121a; --accent:#5aa6ff; --link:#76d4c5; --border: rgba(255,255,255,0.08);
+        --max: 980px;
+      }
+      *{box-sizing:border-box}
+      html,body{height:100%}
+      body{margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--fg); background:radial-gradient(900px 700px at 120% -10%, rgba(90,166,255,.12), transparent 55%), radial-gradient(700px 600px at -20% 120%, rgba(118,212,197,.10), transparent 60%), var(--bg)}
+      a{color:var(--link); text-decoration:none}
+      a:hover{text-decoration:underline}
+      header{padding:56px 20px 28px; text-align:center}
+      .title{font-size:clamp(26px, 5vw, 40px); font-weight:800; letter-spacing:.2px; margin:0 0 10px}
+      .authors, .affils{color:var(--muted)}
+      .badges{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:18px}
+      .badge{background:var(--card); border:1px solid var(--border); padding:10px 14px; border-radius:999px; font-weight:600}
+      .container{max-width:var(--max); margin:0 auto; padding:0 20px 80px}
+      section{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02)); border:1px solid var(--border); border-radius:16px; padding:24px; margin:18px 0}
+      h2{margin:0 0 12px; font-size:22px}
+      p{line-height:1.7; color:var(--fg)}
+      .poster, .image{width:100%; border-radius:12px; border:1px solid var(--border); background:#0e0e16; aspect-ratio: 16/9; display:grid; place-items:center; color:#6e7390}
+      .grid{display:grid; gap:12px}
+      @media(min-width:840px){ .grid.two{grid-template-columns:1fr 1fr} }
+      .code{background:#0d1020; border:1px solid var(--border); border-radius:12px; padding:14px; overflow:auto}
+      footer{color:var(--muted); text-align:center; padding:28px 0 60px}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">FODGE: <span style="font-weight:800">Project Title Goes Here</span></h1>
+      <div class="authors">
+        <a href="#">Your Name</a>, <a href="#">Coauthor A</a>, <a href="#">Coauthor B</a>
+      </div>
+      <div class="affils">Affiliation 1 · Affiliation 2 · <span style="white-space:nowrap">Venue / Year</span></div>
+      <div class="badges">
+        <a class="badge" href="#">arXiv</a>
+        <a class="badge" href="#">Video</a>
+        <a class="badge" href="#">Code</a>
+        <a class="badge" href="#">Demo</a>
+        <a class="badge" href="#">Blogpost</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="poster">
+        <h2>Poster</h2>
+        <div class="poster">在这里放海报图 / 管线图（poster.png）</div>
+      </section>
+
+      <section id="abstract">
+        <h2>Abstract</h2>
+        <p>
+          这里填写 FODGE 的摘要。建议 3–6 句，说明动机、方法关键词、核心创新点与主要实验结果。
+        </p>
+      </section>
+
+      <section id="video">
+        <h2>Video</h2>
+        <div class="grid two">
+          <div class="image">在此嵌入 YouTube / Bilibili（用 iframe）</div>
+          <div>
+            <p><strong>Highlights</strong></p>
+            <ul>
+              <li>示例 1：一句话描述关键效果。</li>
+              <li>示例 2：一句话描述另一项能力。</li>
+              <li>示例 3：延迟、速度或可控性指标。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="pipeline">
+        <h2>Pipeline</h2>
+        <div class="image">pipeline.png 占位图</div>
+      </section>
+
+      <section id="results">
+        <h2>Results</h2>
+        <div class="grid two">
+          <div class="image">results_1.png</div>
+          <div class="image">results_2.png</div>
+        </div>
+      </section>
+
+      <section id="bibtex">
+        <h2>BibTeX</h2>
+        <pre class="code"><code>@article{fodge2025,
+  title={FODGE: Full Project Title},
+  author={Your Name and Coauthor A and Coauthor B and ...},
+  journal={arXiv preprint arXiv:2501.xxxxx},
+  year={2025}
+}</code></pre>
+      </section>
+    </main>
+
+    <footer>
+      <div>© 2025 Your Name. Page style inspired by MotionLCM / Nerfies.</div>
+    </footer>
+  </body>
+</html>
