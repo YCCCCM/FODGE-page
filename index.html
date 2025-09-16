@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>FODGE — Fast, Open, Demo-able Gesture/Editing (?)</title>
+    <title>FODGE — Project Page</title>
     <meta name="description" content="FODGE: Project page (MotionLCM-style)." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,28 +16,28 @@
       }
       *{box-sizing:border-box}
       html,body{height:100%}
-      body{margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--fg); background:radial-gradient(900px 700px at 120% -10%, rgba(90,166,255,.12), transparent 55%), radial-gradient(700px 600px at -20% 120%, rgba(118,212,197,.10), transparent 60%), var(--bg)}
+      body{margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--fg); background:var(--bg-gradient)}
       a{color:var(--link); text-decoration:none}
       a:hover{text-decoration:underline}
       header{padding:56px 20px 28px; text-align:center}
       .title{font-size:clamp(26px, 5vw, 40px); font-weight:800; letter-spacing:.2px; margin:0 0 10px}
       .authors, .affils{color:var(--muted)}
       .badges{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:18px}
-      .badge{background:var(--card); border:1px solid var(--border); padding:10px 14px; border-radius:999px; font-weight:600}
+      .badge{background:var(--card); border:1px solid var(--border); padding:10px 14px; border-radius:999px; font-weight:600; color:var(--accent)}
       .container{max-width:var(--max); margin:0 auto; padding:0 20px 80px}
-      section{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02)); border:1px solid var(--border); border-radius:16px; padding:24px; margin:18px 0}
-      h2{margin:0 0 12px; font-size:22px}
+      section{background:var(--card); border:1px solid var(--border); border-radius:16px; padding:24px; margin:18px 0; box-shadow:0 2px 6px rgba(0,0,0,0.05)}
+      h2{margin:0 0 12px; font-size:22px; color:var(--accent)}
       p{line-height:1.7; color:var(--fg)}
-      .poster, .image{width:100%; border-radius:12px; border:1px solid var(--border); background:#0e0e16; aspect-ratio: 16/9; display:grid; place-items:center; color:#6e7390}
+      .poster, .image{width:100%; border-radius:12px; border:1px solid var(--border); background:#f0f4fa; aspect-ratio: 16/9; display:grid; place-items:center; color:#666}
       .grid{display:grid; gap:12px}
       @media(min-width:840px){ .grid.two{grid-template-columns:1fr 1fr} }
-      .code{background:#0d1020; border:1px solid var(--border); border-radius:12px; padding:14px; overflow:auto}
+      .code{background:#f6f8fa; border:1px solid var(--border); border-radius:12px; padding:14px; overflow:auto}
       footer{color:var(--muted); text-align:center; padding:28px 0 60px}
     </style>
   </head>
   <body>
     <header>
-      <h1 class="title">FODGE:  <span style="font-weight:800">High-fidelity dance generation via Full-body optimization</span></h1>
+      <h1 class="title">FODGE: <span style="font-weight:800">High-fidelity dance generation via Full-body optimization</span></h1>
       <div class="authors">
         <a href="#">Your Name</a>, <a href="#">Coauthor A</a>, <a href="#">Coauthor B</a>
       </div>
