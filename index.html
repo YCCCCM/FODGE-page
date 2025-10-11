@@ -1,165 +1,231 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>FODGE — Project Page</title>
-    <meta name="description" content="FODGE: Project page (MotionLCM-style)." />
+    <meta name="description" content="FODGE: Project page." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-      :root{
-        --bg-gradient: linear-gradient(135deg, #f2f2f7 0%, #e8f0ff 100%);
-        --fg:#222222; --muted:#555555; --card:#ffffff; --accent:#1e88e5; --link:#1976d2; --border: rgba(0,0,0,0.08);
-        --max: 980px;
-      }
-      *{box-sizing:border-box}
-      html,body{height:100%}
-      body{margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--fg); background:var(--bg-gradient)}
-      a{color:var(--link); text-decoration:none}
-      a:hover{text-decoration:underline}
-      header{padding:56px 20px 28px; text-align:center}
-      .title{font-size:clamp(26px, 5vw, 40px); font-weight:800; letter-spacing:.2px; margin:0 0 10px}
-      .authors, .affils{color:var(--muted)}
-      .badges{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:18px}
-      .badge{background:var(--card); border:1px solid var(--border); padding:10px 14px; border-radius:999px; font-weight:600; color:var(--accent)}
-      .container{max-width:var(--max); margin:0 auto; padding:0 20px 80px}
-      section{background:var(--card); border:1px solid var(--border); border-radius:16px; padding:24px; margin:18px 0; box-shadow:0 2px 6px rgba(0,0,0,0.05)}
-      h2{margin:0 0 12px; font-size:22px; color:var(--accent)}
-      p{line-height:1.7; color:var(--fg)}
-      .poster, .image{width:100%; border-radius:12px; border:1px solid var(--border); background:#f0f4fa; display:grid; place-items:center; color:#666; margin-bottom:16px}
-      .image img{max-width:120%; height:auto; border-radius:12px; transform:scale(1.1); transform-origin:center;}
-      .grid{display:grid; gap:12px}
-      .code{background:#f6f8fa; border:1px solid var(--border); border-radius:12px; padding:14px; overflow:auto}
-      footer{color:var(--muted); text-align:center; padding:28px 0 60px}
+        :root{
+            --bg-gradient: linear-gradient(135deg, #f2f2f7 0%, #e8f0ff 100%);
+            --fg:#222222;
+            --muted:#555555;
+            --card:#ffffff;
+            --accent:#1e88e5;
+            --link:#1976d2;
+            --border: rgba(0,0,0,0.08);
+            --max: 980px;
+        }
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body{margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--fg); background:var(--bg-gradient)}
+        a{color:var(--link); text-decoration:none}
+        a:hover{text-decoration:underline}
+        header{padding:56px 20px 28px; text-align:center}
+        .title{font-size:clamp(26px, 5vw, 40px); font-weight:800; letter-spacing:.2px; margin:0 0 10px}
+        .authors, .affils{color:var(--muted)}
+        .badges{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:18px}
+        .badge{background:var(--card); border:1px solid var(--border); padding:10px 14px; border-radius:999px; font-weight:600; color:var(--accent)}
+        .container{max-width:var(--max); margin:0 auto; padding:0 20px 80px}
+        section{background:var(--card); border:1px solid var(--border); border-radius:16px; padding:24px; margin:18px 0; box-shadow:0 2px 6px rgba(0,0,0,0.05)}
+        h2{margin:0 0 12px; font-size:22px; color:var(--accent)}
+        p{line-height:1.7; color:var(--fg)}
+        .poster, .image{
+            width:100%;
+            border-radius:12px;
+            border:1px solid var(--border);
+            background:#f0f4fa;
+            display:grid;
+            place-items:center;
+            color:#666;
+            margin-bottom:16px;
+        }
+        .poster img, .image img {
+            width:auto;
+            max-width:100%;
+            max-height:480px;
+            border-radius:12px;
+            border:1px solid var(--border);
+            object-fit:contain;
+        }
+        .grid{display:grid; gap:12px}
+        @media(min-width:840px){
+            .grid.two{grid-template-columns:1fr 1fr}
+        }
+        .code{background:#f6f8fa; border:1px solid var(--border); border-radius:12px; padding:14px; overflow:auto}
+        footer{color:var(--muted); text-align:center; padding:28px 0 60px}
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <h1 class="title">FODGE: <span style="font-weight:800">Project Title Goes Here</span></h1>
-      <div class="authors">
-        <a href="#">Your Name</a>, <a href="#">Coauthor A</a>, <a href="#">Coauthor B</a>
-      </div>
-      <div class="affils">Affiliation 1 · Affiliation 2 · <span style="white-space:nowrap">Venue / Year</span></div>
-      <div class="badges">
-        <a class="badge" href="#">arXiv</a>
-        <a class="badge" href="#">Video</a>
-        <a class="badge" href="#">Code</a>
-        <a class="badge" href="#">Demo</a>
-        <a class="badge" href="#">Blogpost</a>
-      </div>
+        <h1 class="title">FODGE: <span style="font-weight:800">High-fidelity dance generation via Full-body optimization</span></h1>
+        <div class="authors">
+            <a href="#">Xiaoying Huang<sup>1</sup></a>, <a href="#">Sanyi Zhang<sup>2,3</sup></a>, <a href="#">Qin Zhang<sup>3</sup></a>, <a href="#">Xiaoxuan Guo<sup>1</sup></a>, <a href="#">Long Ye<sup>2,3</sup><sup>*</sup></a>
+        </div>
+        <div class="affils">
+            <sup>1</sup> School of Information and Communication Engineering, Communication University of China, China<br>
+            <sup>2</sup> School of Data Science and Media Intelligence, Communication University of China, China<br>
+            <sup>3</sup> Key Laboratory of Media Audio &amp; Video (Communication University of China), Ministry of Education, China<br>
+            <sup>*</sup> Corresponding author
+        </div>
+        <div class="badges">
+            <a class="badge" href="#">arXiv</a>
+            <a class="badge" href="#">Video</a>
+            <a class="badge" href="https://github.com/YCCCCM/FODGE" target="_blank">Code</a>
+        </div>
     </header>
-
     <main class="container">
-      <section id="poster">
-        <h2>Pipeline</h2>
-        <div class="poster">
-          <embed src="framework.pdf" type="application/pdf" width="100%" height="600px" style="border-radius:12px; border:1px solid var(--border);" />
-        </div>
-      </section>
-
-      <section id="abstract">
-        <h2>Abstract</h2>
-        <p>
-          这里填写 FODGE 的摘要。建议 3–6 句，说明动机、方法关键词、核心创新点与主要实验结果。
-        </p>
-      </section>
-
-      <section id="video">
-        <h2>Video</h2>
-        <div class="carousel">
-          <button class="prev" aria-label="Previous">&#10094;</button>
-          <div class="carousel-track-container">
-            <ul class="carousel-track">
-              <!-- 视频1 -->
-              <li class="carousel-slide">
-                <div class="video-wrapper">
-                  <iframe width="100%" height="315" 
-                          src="https://www.youtube.com/embed/N3Fo-JhlBzM" 
-                          title="YouTube video player"
-                          frameborder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          allowfullscreen loading="lazy"></iframe>
+        <section id="pipeline">
+            <h2>Pipeline</h2>
+            <div class="poster">
+                <img src="framework.png" alt="Pipeline Framework" style="max-height:600px; width:auto; max-width:100%; object-fit:contain; border-radius:12px; border:1px solid var(--border);" />
+            </div>
+        </section>
+        <section id="abstract">
+            <h2>Abstract</h2>
+            <p>
+                Dance is an important connection of artistic expression, yet automatically creating new choreography especially music-driven high-fidelity dance generation still faces significant challenges. Existing approaches primarily enhance physical realism by optimizing foot–ground contact, but some local parts are still unsatisfactory which reduce expressiveness, such as overlook gliding steps (e.g., moonwalk), unnatural arm and head movements. To address these issues, we propose FODGE, a music-conditioned diffusion-based framework with full-body optimization. FODGE integrates a Full-body Refinement Block (FRB) and a Full-body Optimization Post-processing module (FOP). FRB introduces and learns the relationship between arm and foot movements as an optimization clue to refine human motions, thereby enhancing artistic expressiveness. And we further employ a training-free FOP to optimize the dance sequence from a full-body perspective, improving visualization effects. Experimental results demonstrate that FODGE significantly outperforms existing baselines in motion quality while achieving a better balance between physical plausibility and artistic expressiveness.
+            </p>
+        </section>
+        <section id="video">
+            <h2>Video</h2>
+            <div class="carousel">
+                <button class="prev">&#10094;</button>
+                <div class="carousel-track-container">
+                    <ul class="carousel-track">
+                        <!-- 视频1 -->
+                        <li class="carousel-slide">
+                            <div class="video-wrapper">
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/N3Fo-JhlBzM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius:12px;"></iframe>
+                            </div>
+                        </li>
+                        <!-- 视频2 -->
+                        <li class="carousel-slide">
+                            <div class="video-wrapper">
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/P9RLdaXE6tY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius:12px;"></iframe>
+                            </div>
+                        </li>
+                        <!-- 视频3 -->
+                        <li class="carousel-slide">
+                            <div class="video-wrapper">
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/cbWmrR_FFZo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius:12px;"></iframe>
+                            </div>
+                        </li>
+                        <!-- 视频4 -->
+                        <li class="carousel-slide">
+                            <div class="video-wrapper">
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/_or0CDMlgls" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius:12px;"></iframe>
+                            </div>
+                        </li>
+                        <!-- 视频5 -->
+                        <li class="carousel-slide">
+                            <div class="video-wrapper">
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/053-O_WrSmk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius:12px;"></iframe>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-              </li>
-              <!-- 视频2 -->
-              <li class="carousel-slide">
-                <div class="video-wrapper">
-                  <iframe width="100%" height="315" 
-                          src="https://www.youtube.com/embed/P9RLdaXE6tY" 
-                          title="YouTube video player"
-                          frameborder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          allowfullscreen loading="lazy"></iframe>
-                </div>
-              </li>
-              <!-- 视频3 -->
-              <li class="carousel-slide">
-                <div class="video-wrapper">
-                  <iframe width="100%" height="315" 
-                          src="https://www.youtube.com/embed/cbWmrR_FFZo" 
-                          title="YouTube video player"
-                          frameborder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          allowfullscreen loading="lazy"></iframe>
-                </div>
-              </li>
-              <!-- 视频4 -->
-              <li class="carousel-slide">
-                <div class="video-wrapper">
-                  <iframe width="100%" height="315" 
-                          src="https://www.youtube.com/embed/_or0CDMlgls" 
-                          title="YouTube video player"
-                          frameborder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          allowfullscreen loading="lazy"></iframe>
-                </div>
-              </li>
-              <!-- 视频5 -->
-              <li class="carousel-slide">
-                <div class="video-wrapper">
-                  <iframe width="100%" height="315" 
-                          src="https://www.youtube.com/embed/053-O_WrSmk" 
-                          title="YouTube video player"
-                          frameborder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          allowfullscreen loading="lazy"></iframe>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <button class="next" aria-label="Next">&#10095;</button>
-        </div>
-      </section>
+                <button class="next">&#10095;</button>
+            </div>
+        </section>
+        <style>
+            .carousel {
+                position: relative;
+                overflow: hidden;
+                max-width: 100%;
+                margin: auto;
+            }
+            .carousel-track-container {
+                overflow: hidden;
+            }
+            .carousel-track {
+                display: flex;
+                transition: transform 0.5s ease;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+            .carousel-slide {
+                min-width: 100%;
+                box-sizing: border-box;
+                padding: 10px;
+                text-align: center;
+            }
+            .video-wrapper {
+                background: #f0f4fa;
+                border: 1px solid var(--border);
+                border-radius: 12px;
+                padding: 10px;
+            }
+            .prev, .next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background: var(--accent);
+                color: white;
+                border: none;
+                font-size: 24px;
+                padding: 8px 12px;
+                cursor: pointer;
+                border-radius: 50%;
+                z-index: 10;
+            }
+            .prev {
+                left: 10px;
+            }
+            .next {
+                right: 10px;
+            }
+            .prev:hover, .next:hover {
+                background: #1565c0;
+            }
+        </style>
+        <script>
+            const track = document.querySelector('.carousel-track');
+            const slides = Array.from(track.children);
+            const nextButton = document.querySelector('.next');
+            const prevButton = document.querySelector('.prev');
+            let currentIndex = 0;
 
-      <section id="pipeline">
-        <h2>Pipeline</h2>
-        <div class="image">pipeline.png 占位图</div>
-      </section>
+            function updateSlide(index) {
+                const slideWidth = slides[0].getBoundingClientRect().width;
+                track.style.transform = 'translateX(-' + (slideWidth * index) + 'px)';
+            }
 
-      <section id="results">
-        <h2>Results</h2>
-        <div class="image"><img src="result1.png" alt="Result 1" /></div>
-        <div class="image"><img src="result2.png" alt="Result 2" /></div>
-        <div class="poster">
-          <embed src="vis.pdf" type="application/pdf" width="100%" height="600px" style="border-radius:12px; border:1px solid var(--border);" />
-        </div>
-      </section>
+            nextButton.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateSlide(currentIndex);
+            });
 
-      <section id="bibtex">
-        <h2>BibTeX</h2>
-        <pre class="code"><code>@article{fodge2025,
-  title={FODGE: Full Project Title},
-  author={Your Name and Coauthor A and Coauthor B and ...},
-  journal={arXiv preprint arXiv:2501.xxxxx},
-  year={2025}
+            prevButton.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                updateSlide(currentIndex);
+            });
+        </script>
+
+        <section id="results">
+            <h2>Results</h2>
+            <div class="image"><img src="result1.png" alt="Result 1" style="max-height:400px; width:auto; max-width:100%; object-fit:contain; border-radius:12px; border:1px solid var(--border);" /></div>
+            <div class="image"><img src="result2.png" alt="Result 2" style="max-height:400px; width:auto; max-width:100%; object-fit:contain; border-radius:12px; border:1px solid var(--border);" /></div>
+            <div class="poster">
+                <img src="vis.png" alt="Visualization Results" style="max-height:500px; width:auto; max-width:100%; object-fit:contain; border-radius:12px; border:1px solid var(--border);" />
+            </div>
+        </section>
+        <section id="bibtex">
+            <h2>BibTeX</h2>
+            <pre class="code"><code>@article{fodge2025,
+    title={FODGE: High-fidelity dance generation via Full-body optimization},
+    author={Your Name and Coauthor A and Coauthor B and ...},
+    journal={arXiv preprint arXiv:2501.xxxxx},
+    year={2025}
 }</code></pre>
-      </section>
+        </section>
     </main>
-
     <footer>
-      <div>© 2025 Your Name. Page style inspired by MotionLCM / Nerfies.</div>
+        <div>© Xiaoying Huang 2025.</div>
     </footer>
-  </body>
+</body>
 </html>
